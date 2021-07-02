@@ -1,7 +1,7 @@
 <?php
 
 $db_name = "school";
-$db_server = "localhost";
+$db_server = "111.119.187.20";
 $db_user = "root";
 $db_pass = "";
 
