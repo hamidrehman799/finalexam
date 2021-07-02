@@ -3,7 +3,7 @@ class Student {
   final String name;
   final String email;
   final String address;
-  final int phone;
+  final String phone;
 
   Student({this.id, this.name, this.email, this.phone, this.address});
 
