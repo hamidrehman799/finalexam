@@ -1,3 +1,3 @@
 class Env {
-  static String URL_PREFIX = "localhost/finalexam/flutter-php-crud";
+  static String URL_PREFIX = "finalexam\flutter-php-crud\api";
 }
