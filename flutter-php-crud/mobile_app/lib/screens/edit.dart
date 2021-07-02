@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_php/screens/contact.dart';
 import 'package:http/http.dart' as http;
 
 import '../env.dart';
@@ -61,6 +62,18 @@ class _EditState extends State<Edit> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Edit"),
+        actions: <Widget>[
+
+          IconButton(
+            icon: Icon(Icons.contact_phone),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => contact()),
+              );
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         child: RaisedButton(
