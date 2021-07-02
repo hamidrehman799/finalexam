@@ -1,26 +1,40 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'splashscreen/splashscreen.dart';
 
-import './screens/home.dart';
-import './screens/create.dart';
-import './screens/details.dart';
-import './screens/edit.dart';
+void main() {
+  runApp(
 
-void main() => runApp(App());
 
-class App extends StatelessWidget {
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+      )
+  );
+}
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+            () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => App())));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'CRUD APP',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => Home(),
-        '/create': (context) => Create(),
-        '/details': (context) => Details(),
-        '/edit': (context) => Edit(),
-      },
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Image.asset('images/profile.jpg'),
+      ),
     );
   }
 }
-

@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_php/screens/create.dart';
+import 'package:flutter_php/screens/details.dart';
+import 'package:flutter_php/screens/edit.dart';
+import 'package:flutter_php/screens/home.dart';
 
-void main() {
-  runApp(
 
 
-    MaterialApp(
-      home: splashscreen(),
-    )
-  );
-}
 
-class splashscreen extends StatefulWidget {
-  @override
-  _splashscreenState createState() => _splashscreenState();
-}
 
-class _splashscreenState extends State<splashscreen> {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return splashscreenState();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'CRUD APP',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/create': (context) => Create(),
+        '/details': (context) => Details(),
+        '/edit': (context) => Edit(),
+      },
+    );
   }
-}
-
-class splashscreenState extends State<splashscreen>{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-
 }
