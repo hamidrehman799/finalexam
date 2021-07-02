@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_php/screens/contact.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -58,7 +59,10 @@ class HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.contact_phone),
             onPressed: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => contact()),
+              );
             },
           ),
         ],

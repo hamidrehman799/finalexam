@@ -19,6 +19,7 @@ environment:
 dependencies:
   flutter_native_splash: ^1.2.0
   http: 0.12.0
+  contactus: ^1.1.9
 
 flutter_native_splash:
   color: "#ffffff"
